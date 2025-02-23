@@ -26,6 +26,18 @@ This naive "imperative" approach is simple, but it has many problems:
 
 All of this is tedious, error-prone and slow.
 
+## Demo
+
+https://github.com/user-attachments/assets/c85d354b-11ec-42bb-a68f-4234967bfae7
+
+On the left, an interface made with turing-smart-screen-python, on the right, a similar interface made with pidili.
+
+Note:
+
+- most obviously and importantly, how the display using pidili refreshes much more frequently (around ~10 fps vs ~1 fps) as only the parts of the progress bars that actually changed need to be painted
+- how the first paint with pidili already contains the bars, while the t-s-s-p first paint does not as widgets needs to be drawn to the screen one after the other due to the absence of a render buffer
+- how pidili supports alpha blending, t-s-s-p does not
+
 ## Goals
 
 Main goals:
