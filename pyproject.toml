@@ -2,12 +2,23 @@
 name = "pidili"
 version = "0.1.0"
 description = "Declarative display library for smartscreens based on Pillow"
+authors = [
+  { name="Hugo Chargois", email="hugo.chargois@free.fr" },
+]
 readme = "README.md"
 requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "numpy>=2.0.2",
     "pillow>=11.0.0",
 ]
+
+[project.urls]
+homepage = "https://github.com/hchargois/pidili"
 
 [tool.uv]
 dev-dependencies = [
