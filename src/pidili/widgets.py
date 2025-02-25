@@ -193,7 +193,11 @@ class _FontCache:
     def get(self, name: str, size: int) -> ImageFont.FreeTypeFont:
         key = (name, size)
         if key not in self._cache:
-            self._cache[key] = ImageFont.truetype(name, size)
+            try:
+                self._cache[key] = ImageFont.truetype(name, size)
+            except OSError:
+                # the default message "cannot open resource" is not very helpful
+                raise OSError(f"Could not load font '{name}'")
         return self._cache[key]
 
 

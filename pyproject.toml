@@ -1,6 +1,6 @@
 [project]
 name = "pidili"
-version = "0.1.0"
+version = "0.1.1"
 description = "Declarative display library for smartscreens based on Pillow"
 authors = [
   { name="Hugo Chargois", email="hugo.chargois@free.fr" },
